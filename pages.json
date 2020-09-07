@@ -1,0 +1,84 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {}
+		}
+	    ,{
+            "path" : "pages/index/index/index",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/user/user",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/add/add",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/sort/sort",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/history/history",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/detail/detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/list/list",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/anylize/anylize",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/sortanlize/sortanlize",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/zuori/zuori",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/otheruser/otheruser",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/otheruser/detail/detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/chat/chat",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/info/info",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/look/look",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarBackgroundColor": "#0081ff",
+		"navigationBarTitleText": "ColorUi for UniApp",
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "white"
+	},
+	"usingComponts": true,
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": []
+	}
+}
