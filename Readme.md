@@ -26,7 +26,7 @@
 
 ## 作品体验二维码
 
-![](https://wx-xly-1301545895.cos.ap-beijing.myqcloud.com/website-for-me/image/扫码_搜索联合传播样式-白色版.png)
+![](https://wx-xly-1301545895.cos.ap-beijing.myqcloud.com/web/code.png)
 
 ## 团队简介
 
