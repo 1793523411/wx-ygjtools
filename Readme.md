@@ -28,6 +28,8 @@
 
 ![](./static/code.png)
 
+[二维码地址](https://wx-xly-1301545895.cos.ap-beijing.myqcloud.com/web/code.png)
+
 ## 团队简介
 
 个人开发者，河南理工大学，微信名：跌打的小脆骨
