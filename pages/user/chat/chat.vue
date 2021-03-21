@@ -17,7 +17,7 @@
 							<view class="text-grey">{{item.nickName}}</view>
 							<view class="text-gray text-content text-df">
 								{{item.city}}
-								{{item.gender?'女':'男'}}
+								{{!item.gender?'女':'男'}}
 							</view>
 							<view class="bg-grey padding-sm radius margin-top-sm  text-sm">
 								<view class="flex">
@@ -47,7 +47,7 @@
 					</view>
 				</view>
 				<view class="cu-form-group">
-					<textarea maxlength="100" @input="textareaAInput" placeholder="输入你的留言内容(不超过100个字)"></textarea>
+					<textarea maxlength="100" @input="textareaAInput" :value="value" ></textarea>
 				</view>
 				<button class="cu-btn bg-blue lg" style="width: 100%;" @click="addSort">确定</button>
 			</view>
@@ -71,6 +71,7 @@
 				loadModal: false,
 				chatList: [],
 				skip: 0,
+				value:''
 			}
 		},
 		computed: {
@@ -83,7 +84,8 @@
 				this.modalName = e.currentTarget.dataset.target
 			},
 			textareaAInput: function(event) {
-				this.inputValue = event.target.value
+				// this.inputValue = event.target.value
+				this.value = event.target.value
 			},
 			hideModal(e) {
 				this.modalName = null
@@ -109,7 +111,7 @@
 							nickName: tmp.nickName,
 							city: tmp.city,
 							gender: tmp.gender,
-							msg: this.inputValue,
+							msg: this.value,
 							year: year,
 							month: month,
 							day: day,
@@ -124,7 +126,7 @@
 						this.skip = 0
 					})
 					this.hideModal()
-					this.inputValue = ''
+					this.value = ''
 				})
 
 

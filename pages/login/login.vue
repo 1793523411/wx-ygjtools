@@ -10,7 +10,13 @@
 					<button class="cu-btn bg-grey lg" open-type="getUserInfo" withCredentials="true" lang="zh_CN" @getuserinfo="wxGetUserInfo">登录</button>
 				</view>
 			</view>
-
+			<view class="" style="color: #FFFFFF;position: fixed;bottom: 200rpx;font-size: large;left: 30rpx;padding: 15rpx;">
+				该小程序用于帮助用户记录日常的消费情况<br>登录后在该小程序中记录自己的消费记录
+			</view>
+			<br>
+			<view class="">
+				
+			</view>
 		</view>
 	</view>
 </template>

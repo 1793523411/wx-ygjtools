@@ -9,7 +9,7 @@
 					<view class=" text-xl padding" style="margin-left: 30rpx;">
 						<text class="text-black">{{userInfo.userInfo.nickName}}</text><br>
 						<view class="text-gray" style="font-size: xx-small;">{{userInfo.userInfo.city}}
-							{{userInfo.userInfo.gender?'女':'男'}}</view>
+							{{!userInfo.userInfo.gender?'女':'男'}}</view>
 					</view>
 				</view>
 			</view>

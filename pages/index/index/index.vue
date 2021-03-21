@@ -44,7 +44,7 @@
 			</view>
 		</navigator>
 		
-		<view class="cu-bar bg-white solid-bottom margin-top" style="margin: 0 30rpx;">
+		<view class="cu-bar bg-white solid-bottom margin-top animation-slide-left" style="margin: 0 30rpx;">
 			<view class="action">
 				<text class=" text-orange "></text> 今日消费情况
 			</view>
@@ -55,9 +55,9 @@
 				</navigator>
 			</view>
 		</view>
-		<view class="cu-list menu-avatar" style="margin: 30rpx;margin-top: -30rpx; background-color: #fff;">
-			<view class="cu-item animation-slide-bottom" :class="modalName=='move-box-'+ index?'move-cur':''" v-for="(item,index) in list" :key="index"
-			 @touchstart="ListTouchStart" @touchmove="ListTouchMove" @touchend="ListTouchEnd" :data-target="'move-box-' + index" :style="[{animationDelay: (index%10 + 1)*0.1 + 's'}]">
+		<view class="cu-list menu-avatar animation-scale-up" style="margin: 30rpx;margin-top: -30rpx; background-color: #fff;">
+			<view class="cu-item" :class="modalName=='move-box-'+ index?'move-cur':''" v-for="(item,index) in list" :key="index"
+			 @touchstart="ListTouchStart" @touchmove="ListTouchMove" @touchend="ListTouchEnd" :data-target="'move-box-' + index">
 				<view class="cu-avatar round lg" ></view>
 				<view class="padding-sm cu-avatar round lg">
 					<view class="bg-gradual-orange padding radius text-center shadow-blur circle2">
@@ -87,6 +87,12 @@
 			<button class="cu-btn bg-grey lg" @click="more">加载更多</button>
 			<!-- <button class="cu-btn bg-red margin-tb-sm lg">嫣红</button> -->
 		</view>
+		
+		<view class="cu-load load-modal" v-if="loadModal">
+			<!-- <view class="cuIcon-emojifill text-orange"></view> -->
+			<image src="/static/logo.png" mode="aspectFit"></image>
+			<view class="gray-text">加载中...</view>
+		</view>
 	</view>
 </template>
 
@@ -98,7 +104,8 @@
 				modalName: null,
 				listTouchStart: 0,
 				listTouchDirection: null,
-				ColorList: this.ColorList
+				loadModal:false,
+				ColorList: this.ColorList,
 			}
 		},
 		props: {
@@ -126,6 +133,7 @@
 				this.listTouchDirection = null
 			},
 			remoive(id) {
+				this.loadModal = true
 				wx.cloud.callFunction({
 					name: 'dellist',
 					data: {
@@ -133,6 +141,7 @@
 					}
 				}).then(res => {
 					this.$emit("update")
+					this.loadModal = false
 				})
 				console.log(id)
 			},

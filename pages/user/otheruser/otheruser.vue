@@ -20,7 +20,7 @@
 							<view class="content flex-sub">
 								<view class="text-grey">{{item.userInfo.nickName}}</view>
 								<view class="text-gray text-sm flex justify-between">
-									{{item.userInfo.city}} {{item.userInfo.gender?'女':'男'}}
+									{{item.userInfo.city}} {{!item.userInfo.gender?'女':'男'}}
 								</view>
 							</view>
 						</view>

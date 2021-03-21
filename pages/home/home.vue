@@ -309,9 +309,7 @@
 			getUser() {
 				let db = wx.cloud.database();
 				const users = db.collection('users')
-				users.where({
-					_openid: this.openid
-				}).get().then(res => {
+				users.get().then(res => {
 					console.log(res)
 					let tmparr = []
 					res.data.forEach(item => {

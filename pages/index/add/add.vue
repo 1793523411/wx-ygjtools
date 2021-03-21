@@ -109,6 +109,16 @@
 					this.modalName = 'Modal'
 					return
 				}
+				if(!(+this.money<10000)){
+					console.log('aaaaaaaaaaaaaaaa')
+					console.log(+this.money)
+					console.log(this.money)
+					console.log(typeof +this.money)
+					console.log(typeof this.money)
+					// console.log(typeof this.money)
+					this.modalName = 'Modal'
+					return
+				}
 				console.log(this.title)
 				console.log(this.money)
 				console.log(this.conetnt)
